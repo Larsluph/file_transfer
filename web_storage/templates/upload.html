@@ -1,0 +1,10 @@
+{% extends "base_layout.html" %}
+
+{% block title %}File Storage - Upload Page{% endblock title %}
+
+{% block content %}
+        <form method="POST", enctype="multipart/form-data">
+            <input type="file" multiple="true" name="files" required>
+            <input type="submit" value="Upload">
+        </form>
+{% endblock content %}

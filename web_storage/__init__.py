@@ -1,15 +1,30 @@
 """app pkg."""
 
-from web_storage import routes
+from os import remove
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from larsmod.file_manager import list_files as get_files
 
+
+def cleanup():
+    "cleanup upload folder"
+
+    print("Cleaning up folder...")
+    for file in get_files(app.config["UPLOAD_FOLDER"])[1]:
+        remove(file)
+    print("Cleanup completed!")
 
 class FlaskClient(Flask):
     """Creates web client instance."""
 
-    pass
+    def __del__(self):
+        "cleanup folder when server closed"
+
+        cleanup()
 
 
 app = FlaskClient(__name__)
-app.config["IMAGE_UPLOADS"] = r"D:\Dev\Scripts\py\Utilitaires\web_apps\file_storage\web_storage\saved_data"
+app.config["UPLOAD_FOLDER"] = r"D:\Dev\Scripts\py\Utilitaires\web_apps\file_storage\web_storage\saved_data"
+
+from web_storage import routes

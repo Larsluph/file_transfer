@@ -2,8 +2,15 @@
 <html>
     <head>
         <title>{% block title %}{% endblock title %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
+        <ul id="navbar">
+            <li><a href="{{ url_for('home_page') }}">Home</a></li>
+            <li><a href="{{ url_for('upload_file') }}">Upload Files</a></li>
+            <li><a href="{{ url_for('list_files') }}">File List</a></li>
+            <li><a href="{{ url_for('clear_dir') }}">Cleanup directory</a></li>
+        </ul>
         {% block content %}{% endblock content %}
     </body>
 </html>
