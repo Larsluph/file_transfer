@@ -44,7 +44,7 @@ def uploaded_file(filename):
 def list_files():
     files = get_files(dirpath=app.config["UPLOAD_FOLDER"])[1]
 
-    return flask.render_template("listfiles.html", filelist=map(lambda x: x.split("\\")[-1], files))
+    return flask.render_template("listfiles.html", filelist=map(lambda x: x.split("/")[-1], files))
 
 @app.route("/cleanup")
 def clear_dir():

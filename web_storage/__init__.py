@@ -3,7 +3,6 @@
 from os import remove
 
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from larsmod.file_manager import list_files as get_files
 
 
@@ -25,6 +24,6 @@ class FlaskClient(Flask):
 
 
 app = FlaskClient(__name__)
-app.config["UPLOAD_FOLDER"] = r"D:\Dev\Scripts\py\Utilitaires\web_apps\file_storage\web_storage\saved_data"
+app.config["UPLOAD_FOLDER"] = "web_storage/saved_data"
 
 from web_storage import routes
