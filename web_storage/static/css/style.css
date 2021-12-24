@@ -1,5 +1,27 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar {
+  overflow: hidden;
+  background-color: #646464;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+  background-color: #969696;
+}
+
+.container {
+  padding: 18px;
+  margin-top: 50.8px;
 }
