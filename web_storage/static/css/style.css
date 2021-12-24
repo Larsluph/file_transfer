@@ -33,11 +33,27 @@ a:hover {
   text-decoration: underline;
 }
 
+li img {
+  margin-right: 5px;
+  max-height: 15px;
+}
+
+li.unknown img {
+  content: url("../img/file.png");
+}
 li.unknown a {
   color: #969696;
 }
+
+li.document img {
+  content: url("../img/doc.png");
+}
 li.document a {
-  color: #66acd4;
+  color: rgb(102, 172, 212);
+}
+
+li.script img {
+  content: url("../img/script.png")
 }
 li.script a {
   color: #60c090;
