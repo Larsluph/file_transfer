@@ -15,16 +15,8 @@ def cleanup():
         remove(file)
     print("Cleanup completed!")
 
-class FlaskClient(Flask):
-    """Creates web client instance."""
 
-    def __del__(self):
-        "cleanup folder when server closed"
-
-        cleanup()
-
-
-app = FlaskClient(__name__)
-app.config["UPLOAD_FOLDER"] = r"D:\Dev\Scripts\py\Utilitaires\web_apps\file_storage\web_storage\saved_data"
+app = Flask(__name__)
+app.config["UPLOAD_FOLDER"] = r"D:\Dev\Scripts\Python\Utilitaires\web_apps\file_storage\web_storage\saved_data"
 
 from web_storage import routes
