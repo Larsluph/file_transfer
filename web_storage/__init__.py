@@ -3,7 +3,6 @@
 from os import remove
 
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from larsmod.file_manager import list_files as get_files
 
 
