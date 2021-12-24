@@ -25,3 +25,20 @@
   padding: 18px;
   margin-top: 50.8px;
 }
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+li.unknown a {
+  color: #969696;
+}
+li.document a {
+  color: #66acd4;
+}
+li.script a {
+  color: #60c090;
+}

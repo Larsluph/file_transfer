@@ -3,6 +3,9 @@
 from datetime import datetime
 from os.path import join as join_path
 from os.path import exists as is_exists
+from os.path import basename as get_filename
+from os.path import splitext
+get_ext = lambda x: splitext(x)[1]
 
 import flask
 from larsmod.file_manager import list_files as get_files
@@ -42,9 +45,24 @@ def uploaded_file(filename):
 
 @app.route("/listfiles")
 def list_files():
-    files = get_files(dirpath=app.config["UPLOAD_FOLDER"])[1]
+    UNKNOWN = "unknown"
+    DOCUMENT = "document"
+    SCRIPT = "script"
 
-    return flask.render_template("listfiles.html", filelist=map(lambda x: x.split("/")[-1], files))
+    collections = {
+        "pdf": DOCUMENT,
+        "docx": DOCUMENT,
+        "txt": DOCUMENT,
+        "c": SCRIPT,
+        "cpp": SCRIPT,
+        "py": SCRIPT
+    }
+
+    files = get_files(dirpath=app.config["UPLOAD_FOLDER"])[1]
+    file_list = list(map(get_filename, files))
+    classes = list(map(lambda x: collections.get(get_ext(x)[1:], UNKNOWN), file_list))
+
+    return flask.render_template("listfiles.html", filelist=zip(file_list, classes))
 
 
 @app.route("/cleanup")

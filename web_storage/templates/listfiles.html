@@ -4,8 +4,8 @@
 
 {% block content %}
     <ul>
-    {% for file in filelist %}
-        <li><a href="{{ url_for('uploaded_file', filename=file) }}">{{ file }}</a></li>
+    {% for filename, class in filelist %}
+        <li class="{{ class }}"><a href="{{ url_for('uploaded_file', filename=filename) }}">{{ filename }}</a></li>
     {% endfor %}
     </ul>
 {% endblock content %}
