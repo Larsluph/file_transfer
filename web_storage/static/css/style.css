@@ -1,9 +1,14 @@
+body {
+  margin: 0;
+}
+
 .navbar {
   overflow: hidden;
   background-color: #646464;
   position: fixed;
   top: 0;
   width: 100%;
+  border-bottom: 4px solid #0477c4;
 }
 
 .navbar a {
@@ -14,11 +19,14 @@
   padding: 15px 18px;
   text-decoration: none;
   font-size: 18px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #0477c4;
+  transition: ease-out 0.3s;
 }
 
 .navbar a:hover {
   color: #ffffff;
-  background-color: #969696;
+  box-shadow: inset 0 -100px 0 0 #0477c4;
 }
 
 .container {
@@ -53,8 +61,21 @@ li.document a {
 }
 
 li.script img {
-  content: url("../img/script.png")
+  content: url("../img/script.png");
 }
 li.script a {
   color: #60c090;
+}
+
+li.android img {
+  content: url("../img/android.png");
+}
+li.android a {
+  color: #92C755;
+}
+li.application img {
+  content: url("../img/application.png");
+}
+li.application a {
+  color: #0078D7;
 }
