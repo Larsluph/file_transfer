@@ -48,6 +48,8 @@ def list_files():
     UNKNOWN = "unknown"
     DOCUMENT = "document"
     SCRIPT = "script"
+    ANDROID = "android"
+    APPLICATION = "application"
 
     collections = {
         "pdf": DOCUMENT,
@@ -55,7 +57,9 @@ def list_files():
         "txt": DOCUMENT,
         "c": SCRIPT,
         "cpp": SCRIPT,
-        "py": SCRIPT
+        "py": SCRIPT,
+        "apk": ANDROID,
+        "exe": APPLICATION
     }
 
     files = get_files(dirpath=app.config["UPLOAD_FOLDER"])[1]
