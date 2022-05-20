@@ -139,4 +139,5 @@ dmypy.json
 cython_debug/
 
 # user rules
+.idea/
 saved_data/
