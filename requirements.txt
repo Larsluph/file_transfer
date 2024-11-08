@@ -1,2 +1,4 @@
-Flask
-psutil
+Flask~=3.0.3
+colorama~=0.4.6
+larsmod~=1.0.0
+Werkzeug~=3.1.3

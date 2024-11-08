@@ -107,7 +107,7 @@ celerybeat.pid
 
 # Environments
 .env
-.venv
+.env
 env/
 venv/
 ENV/
@@ -140,4 +140,3 @@ cython_debug/
 
 # user rules
 .idea/
-saved_data/

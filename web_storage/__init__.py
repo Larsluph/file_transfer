@@ -1,4 +1,4 @@
-"""app pkg."""
+"""app pkg"""
 from os import remove, getcwd
 from os.path import basename as get_filename, join
 from os.path import exists as is_exists
@@ -9,7 +9,7 @@ from flask import Flask, render_template, request, send_from_directory
 from larsmod.file_manager import list_files as get_files
 from werkzeug.utils import secure_filename
 
-from web_storage.assoc import *
+from .assoc import *
 
 
 def get_ext(x): return splitext(x)[1]
@@ -71,8 +71,7 @@ def clear_dir():
     cleanup()
     return """<h2>Server storage cleaned up!</h2>
 <script>
-let tID = setTimeout(function () {
-    window.location.href = "/upload";
-    window.clearTimeout(tID);
+setTimeout(function () {
+  window.location.href = "/upload";
 }, 2000);
 </script>"""
