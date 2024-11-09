@@ -1,0 +1,55 @@
+li.application img {
+  content: url("../img/application.png");
+}
+li.application a {
+  color: #0078D7;
+}
+
+li.archive img {
+  content: url("../img/archive.png");
+}
+li.archive a {
+  color: #FFA500;
+}
+
+li.audio img {
+  content: url("../img/audio.png");
+}
+li.audio a {
+  color: #FFD800;
+}
+
+li.document img {
+  content: url("../img/doc.png");
+}
+li.document a {
+  color: #66acd4;
+}
+
+li.image img {
+  content: url("../img/image.png");
+}
+li.image a {
+  color: #f36af1;
+}
+
+li.unknown img {
+  content: url("../img/file.png");
+}
+li.unknown a {
+  color: #969696;
+}
+
+li.script img {
+  content: url("../img/script.png");
+}
+li.script a {
+  color: #60c090;
+}
+
+li.video img {
+  content: url("../img/video.png");
+}
+li.video a {
+  color: #a12ae8;
+}

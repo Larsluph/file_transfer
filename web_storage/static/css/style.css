@@ -45,37 +45,3 @@ li img {
   margin-right: 5px;
   max-height: 15px;
 }
-
-li.unknown img {
-  content: url("../img/file.png");
-}
-li.unknown a {
-  color: #969696;
-}
-
-li.document img {
-  content: url("../img/doc.png");
-}
-li.document a {
-  color: rgb(102, 172, 212);
-}
-
-li.script img {
-  content: url("../img/script.png");
-}
-li.script a {
-  color: #60c090;
-}
-
-li.android img {
-  content: url("../img/android.png");
-}
-li.android a {
-  color: #92C755;
-}
-li.application img {
-  content: url("../img/application.png");
-}
-li.application a {
-  color: #0078D7;
-}
